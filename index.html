@@ -5,29 +5,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hello world!</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Serif+Display:ital@0;1&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
     <style>
+      .abril-fatface-regular {
+        font-family: "Abril Fatface", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      /* // <weight>: Use a value from 300 to 800
+// <uniquifier>: Use a unique and descriptive class name */
+
+    .open-sans-uniquename {
+      font-family: "Open Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+
+      .dm-serif-display-regular {
+        font-family: "DM Serif Display", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
       body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         height: 100vh;
         margin: 0;
         background: #fafafa;
-        font-family: "Arial", sans-serif;
+        /* background: #313131; */
+        font-family: sans-serif;
+      }
+
+      .masking-container, .extra-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         overflow: hidden;
       }
 
+      .extra-info {
+        flex-direction: column;
+      }
+
       .masked-text {
+        line-height: 0.85;
+        text-align: center;
         font-size: 8rem;
         font-weight: bold;
         color: transparent;
-        background-image: url("https://images.unsplash.com/photo-1732535725600-f805d8b33c9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        /* background-image: url("https://images.unsplash.com/photo-1732535725600-f805d8b33c9c?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"); */
+        background-image: url("https://images.unsplash.com/photo-1616697412153-7ad8ac8aa5d9?q=80&w=2728&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-image: url("https://plus.unsplash.com/premium_photo-1681589434452-4253e9647569?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-image: url("https://images.unsplash.com/photo-1674816927036-113606fdb1df?q=80&w=2342&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
         background-size: 200%; /* Enlarged for smooth animation */
         background-position: 0 50%;
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        animation: animate-background 5s infinite alternate linear;
+        animation: animate-background 10s infinite alternate linear;
       }
 
       @keyframes animate-background {
@@ -42,7 +82,16 @@
   </head>
   <body>
     <div class="masking-container">
-      <h1 class="masked-text">HandsFinder.com</h1>
+      <h1 class="masked-text abril-fatface-regular dm-serif-display-regular">
+        Hands</br>Finder</br>.com
+      </h1>
     </div>
+
+    <div class="extra-info open-sans-uniquename">
+      <h1>Coming soon</h1>
+      <p>Made in Amsterdam</p>
+    </div>
+
+    <!-- https://codepen.io/nefejames/pen/JoPPBxK -->
   </body>
 </html>
